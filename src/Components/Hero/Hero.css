@@ -135,6 +135,7 @@ html.dark .text-container p {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
 }
 
 .image-container img {
@@ -143,6 +144,58 @@ html.dark .text-container p {
   border-radius: 20%;
   border: 4px solid #00a6fb;
   box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Estilos para los iconos sociales */
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  margin-top: 25px;
+  width: 100%;
+}
+
+.social-links a {
+  color: #00a6fb;
+  font-size: 2rem;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.social-links a:hover {
+  transform: translateY(-5px) scale(1.1);
+  color: #008ad1;
+}
+
+html.dark .social-links a {
+  color: #f9f9f9;
+}
+
+html.dark .social-links a:hover {
+  color: #00a6fb;
+}
+
+/* Tooltip para los iconos */
+.social-links .tooltip::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #333;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  z-index: 100;
+}
+
+.social-links .tooltip:hover::after {
+  opacity: 1;
 }
 
 .tooltip {
@@ -171,6 +224,64 @@ html.dark .text-container p {
   opacity: 1;
 }
 
+/* Estilos para la sección de tecnologías debajo de botones */
+.tech-stack-below {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 40px;
+  padding: 20px 0;
+}
+
+.tech-stack-below .tech-icons {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  flex-wrap: wrap;
+  margin-bottom: 15px;
+}
+
+.tech-stack-below .tech-icons i {
+  font-size: 2.5rem;
+  color: #00a6fb;
+  opacity: 0.7;
+  transition: all 0.5s ease;
+}
+
+html.dark .tech-stack-below .tech-icons i {
+  color: #f9f9f9;
+}
+
+.tech-stack-below .tech-icons i.active {
+  opacity: 1;
+  transform: scale(1.3);
+  filter: drop-shadow(0 0 8px currentColor);
+}
+
+.tech-stack-below .tech-text {
+  color: #4a4b6d;
+  font-size: 1rem;
+  font-weight: 500;
+  margin-top: 15px;
+  letter-spacing: 1px;
+}
+
+html.dark .tech-stack-below .tech-text {
+  color: #f9f9f9;
+}
+
+/* Animación para iconos */
+@keyframes techPulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+
+.tech-stack-below .tech-icons i:hover {
+  animation: techPulse 0.8s infinite;
+}
+
 /* Responsive */
 @media (max-width: 768px) {
   .hero {
@@ -185,7 +296,12 @@ html.dark .text-container p {
   }
 
   .image-container {
-    display: none;
+    display: flex;
+    margin-top: 30px;
+  }
+
+  .image-container img {
+    width: 60%;
   }
 
   .btn,
@@ -198,5 +314,31 @@ html.dark .text-container p {
   .btn-split-wrapper {
     flex-direction: row;
     width: 100%;
+  }
+
+  .social-links {
+    margin-top: 20px;
+    margin-bottom: 30px;
+    gap: 20px;
+  }
+  
+  .social-links a {
+    font-size: 1.8rem;
+  }
+
+  .tech-stack-below {
+    margin-top: 30px;
+  }
+  
+  .tech-stack-below .tech-icons {
+    gap: 20px;
+  }
+  
+  .tech-stack-below .tech-icons i {
+    font-size: 2.2rem;
+  }
+  
+  .tech-stack-below .tech-text {
+    font-size: 0.9rem;
   }
 }

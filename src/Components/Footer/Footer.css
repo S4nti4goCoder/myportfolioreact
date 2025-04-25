@@ -1,7 +1,7 @@
 /* Estilos del footer */
 .footer {
     background: 
-    linear-gradient(to right,  #121130, #1e1d4b,  #121130);
+    linear-gradient(to right,  #212121, #1a1a1e, #121214);
     padding: 20px 8vw;
     color: #f9f9f9;
     margin-top: 50px;
@@ -26,7 +26,7 @@
   /* Efecto al pasar el mouse */
   .social-icons a:hover {
     transform: scale(1.2);
-    color: #3931e1; /* Azul claro */
+    color: #00a6fb; /* Azul claro */
   }
   
   /* 📌 RESPONSIVE: Ajuste para móviles */

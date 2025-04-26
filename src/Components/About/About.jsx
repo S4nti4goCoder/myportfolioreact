@@ -24,7 +24,7 @@ const About = () => {
             Sobre <span className="highlight">Mí</span>
           </h1>
           <p className="description">
-            Desarrollador Full Stack con experiencia en múltiples tecnologías.
+            Desarrollador Frontend y Backend con experiencia en múltiples tecnologías.
             Apasionado por crear aplicaciones web eficientes y escalables.
             Autodidacta comprometido con el aprendizaje continuo y las mejores
             prácticas de desarrollo.
@@ -45,8 +45,8 @@ const About = () => {
 
             <div className="experience-card">
               <FaUsers className="experience-icon" />
-              <span className="experience-number">3+</span>
-              <p className="experience-text">Años de Experiencia</p>
+              <span className="experience-number">1+</span>
+              <p className="experience-text">Años de Experiencia en proyectos</p>
             </div>
           </div>
 

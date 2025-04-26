@@ -11,11 +11,11 @@ const ContactForm = () => {
                     <h2>INFORMACIÓN DE CONTACTO</h2>
                     <p>
                         <i className="fas fa-envelope"></i>
-                        ejemplo@gmail.com
+                        santiagoquintero.softdev.code@gmail.com
                     </p>
                     <p>
                         <i className="fas fa-phone"></i>
-                        +1 (285) 1234567
+                        +57 315-448-8668
                     </p>
                    </div>
                 </div>
@@ -25,7 +25,7 @@ const ContactForm = () => {
                     <form action="https://formspree.io/f/mdkezlbv" method="POST">
                         <input type="text" name="name" placeholder="Nombres" required />
                         <input type="email" name="email" placeholder="Correo Electronico" required />
-                        <textarea name="message"  placeholder="Mensajer" required></textarea>
+                        <textarea name="message"  placeholder="Mensaje" required></textarea>
                         <button type="submit">Enviar Mensaje</button>
                     </form>
                 </div>

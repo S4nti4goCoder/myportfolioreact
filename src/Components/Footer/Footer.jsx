@@ -8,17 +8,14 @@ const Footer = () => {
         <hr />
         <div className="social-icons">
             <a href="#" target="_blank" rel="noopener noreferrer">
-                <i className="fab fa-facebook-f"></i>
+                <i className="fab fa-linkedin"></i>
             </a>
             <a href="#" target="_blank" rel="noopener noreferrer">
-                <i className="fab fa-instagram"></i>
-            </a>
-            <a href="#" target="_blank" rel="noopener noreferrer">
-                <i className="fab fa-tiktok"></i>
+                <i className="fab fa-github"></i>
             </a>
         </div>
 
-        <p>Copyright {currentYear} © edukuk.dev - Todos los derechos reservados.</p>
+        <p>Copyright {currentYear} © SANTIAGOCODER - Todos los derechos reservados.</p>
      </footer>
   )
 }

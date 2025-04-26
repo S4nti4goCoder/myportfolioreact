@@ -29,6 +29,7 @@
     color: #00a6fb; /* Azul claro */
   }
   
+  
   /* 📌 RESPONSIVE: Ajuste para móviles */
   @media (max-width: 600px) {
     .social-icons {

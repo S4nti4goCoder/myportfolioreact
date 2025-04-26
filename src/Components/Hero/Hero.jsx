@@ -1,19 +1,25 @@
 import "./Hero.css";
 import foto from "../../assets/foto.png";
+import { FaWhatsapp } from "react-icons/fa";
 import { useEffect, useState } from "react";
 
 const Hero = () => {
   const [currentTech, setCurrentTech] = useState(0);
-  
+
   const technologies = [
-    { name: "React", icon: "fab fa-react", color: "#61DAFB" },
-    { name: "Node.js", icon: "fab fa-node-js", color: "#68A063" },
-    { name: "JavaScript", icon: "fab fa-js", color: "#F7DF1E" },
     { name: "HTML5", icon: "fab fa-html5", color: "#E34F26" },
     { name: "CSS3", icon: "fab fa-css3-alt", color: "#1572B6" },
+    { name: "JavaScript", icon: "fab fa-js", color: "#F7DF1E" },
+    { name: "Node.js", icon: "fab fa-node-js", color: "#68A063" },
+    { name: "React", icon: "fab fa-react", color: "#61DAFB" },
+    { name: "Angular", icon: "fab fa-angular", color: "#dd0031" },
+    { name: "MySQL", icon: "fas fa-database", color: "#4479A1" },
     { name: "PHP", icon: "fab fa-php", color: "#777BB4" },
-    { name: "Python", icon: "fab fa-python", color: "#3776AB" },
-    { name: "MongoDB", icon: "fas fa-database", color: "#47A248" }
+    { name: "Laravel", icon: "fab fa-laravel", color: "#f53003" },
+    { name: "Git", icon: "fab fa-git-alt", color: "#F05032" },
+    { name: "Bootstrap", icon: "fab fa-bootstrap", color: "#7952B3" },
+    { name: "Tailwind CSS", icon: "fab fa-css3-alt", color: "#06B6D4" },
+    { name: "Figma", icon: "fab fa-figma", color: "#F24E1E" },
   ];
 
   useEffect(() => {
@@ -30,21 +36,22 @@ const Hero = () => {
         <h1>Santiago Quintero</h1>
         <h3 className="typing">Desarrollador Fullstack</h3>
         <p>
-          Soy un apasionado del desarrollo web con experiencia en{" "}
-          <strong>React</strong>, <strong>Node.js</strong>, <strong>PHP</strong>{" "}
-          y <strong>MongoDB</strong>. Me especializo en crear soluciones
+          Soy un apasionado del desarrollo Fontend y Backend con experiencia en{" "}
+          <strong>Javascript</strong>, <strong>React.js</strong>, <strong>Angular.js</strong>, <strong>MySQL</strong>, <strong>PHP</strong>{" "}
+          y <strong>Laravel</strong>. Me especializo en crear soluciones
           digitales modernas, rápidas y escalables, con enfoque en la
           experiencia del usuario y la calidad del código.
         </p>
-        
+
         <div className="hero-buttons">
           <a
-            href="https://wa.me/50245984577"
+            href="https://wa.me/573154488668"
             target="_blank"
             rel="noopener noreferrer"
             className="btn"
           >
             ¡Hablemos!
+            <FaWhatsapp style={{ marginLeft: "8px", fontSize: "1.5rem", color: "#fff" }} />
           </a>
 
           <div className="btn-split-wrapper">
@@ -60,22 +67,22 @@ const Hero = () => {
               href="/cv_santiago.pdf"
               download
               className="btn-right tooltip"
-              title="Descargar CV"
+              data-tooltip="Descargar CV"
             >
               <i className="fas fa-download"></i>
             </a>
           </div>
         </div>
-
-        {/* Sección de tecnologías debajo de los botones */}
         <div className="tech-stack-below">
           <div className="tech-icons">
             {technologies.map((tech, index) => (
-              <i 
+              <i
                 key={tech.name}
-                className={`${tech.icon} ${index === currentTech ? 'active' : ''}`}
+                className={`${tech.icon} ${
+                  index === currentTech ? "active" : ""
+                }`}
                 title={tech.name}
-                style={{ color: index === currentTech ? tech.color : '' }}
+                style={{ color: index === currentTech ? tech.color : "" }}
               />
             ))}
           </div>
@@ -86,9 +93,9 @@ const Hero = () => {
       <div className="image-container">
         <img src={foto} alt="foto" />
         <div className="social-links">
-          <a 
-            href="http://www.linkedin.com/in/santiago-david-garcia-quintero-218b35361" 
-            target="_blank" 
+          <a
+            href="http://www.linkedin.com/in/santiago-david-garcia-quintero-218b35361"
+            target="_blank"
             rel="noopener noreferrer"
             aria-label="LinkedIn"
             className="tooltip"
@@ -96,9 +103,9 @@ const Hero = () => {
           >
             <i className="fab fa-linkedin"></i>
           </a>
-          <a 
-            href="https://github.com/S4nti4goCoder" 
-            target="_blank" 
+          <a
+            href="https://github.com/S4nti4goCoder"
+            target="_blank"
             rel="noopener noreferrer"
             aria-label="GitHub"
             className="tooltip"

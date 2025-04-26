@@ -7,12 +7,12 @@ const Footer = () => {
 
   return (
     <footer className="footer">
-      <hr />
       <div className="social-icons">
         <a
           href="https://www.linkedin.com/in/santiago-david-garcia-quintero-218b35361/"
           target="_blank"
           rel="noopener noreferrer"
+          aria-label="LinkedIn"
         >
           <i className="fab fa-linkedin"></i>
         </a>
@@ -20,6 +20,7 @@ const Footer = () => {
           href="https://github.com/S4nti4goCoder"
           target="_blank"
           rel="noopener noreferrer"
+          aria-label="GitHub"
         >
           <i className="fab fa-github"></i>
         </a>

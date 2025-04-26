@@ -7,16 +7,30 @@ import {
   FaLaptopCode,
 } from "react-icons/fa";
 import { useTranslation } from "react-i18next";
+import { motion } from "framer-motion";
 
 const About = () => {
   const { t } = useTranslation();
 
   return (
-    <div className="about-details" id="about">
-      {/* Fila 1: Gif + Información */}
+    <motion.section
+      className="about-details"
+      id="about"
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      transition={{ duration: 1 }}
+      viewport={{ once: false, amount: 0.3 }}
+    >
+      {/* Fila 1: GIF + Info */}
       <div className="about-top">
         {/* GIF */}
-        <div className="about-gif-container">
+        <motion.div
+          className="about-gif-container"
+          initial={{ opacity: 0, x: -50 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 1 }}
+          viewport={{ once: false, amount: 0.3 }}
+        >
           <img
             src={codingGif}
             alt="Persona programando"
@@ -27,58 +41,115 @@ const About = () => {
             <FaLaptopCode className="overlay-icon" />
             <span>{t("about.overlayText")}</span>
           </div>
-        </div>
+        </motion.div>
 
-        {/* SOBRE MI */}
-        <div className="about-infos">
+        {/* SOBRE MÍ */}
+        <motion.div
+          className="about-infos"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, delay: 0.2 }}
+          viewport={{ once: false, amount: 0.3 }}
+        >
           <h2>
             {t("about.title1")} <span className="highlight">{t("about.title2")}</span>
           </h2>
-          <p className="description">{t("about.description")}</p>
 
-          <section className="experience-section">
-            <div className="experience-card">
-              <FaAward className="experience-icon" />
-              <span className="experience-number">10+</span>
-              <p className="experience-text">{t("about.experience.publicRepos")}</p>
-            </div>
+          <motion.p
+            className="description"
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 1, delay: 0.4 }}
+            viewport={{ once: false, amount: 0.3 }}
+          >
+            {t("about.description")}
+          </motion.p>
 
-            <div className="experience-card">
-              <FaProjectDiagram className="experience-icon" />
-              <span className="experience-number">5+</span>
-              <p className="experience-text">{t("about.experience.featuredProjects")}</p>
-            </div>
-
-            <div className="experience-card">
-              <FaUsers className="experience-icon" />
-              <span className="experience-number">1+</span>
-              <p className="experience-text">{t("about.experience.yearsExperience")}</p>
-            </div>
-          </section>
-        </div>
+          {/* Tarjetas de Experiencia */}
+          <motion.section
+            className="experience-section"
+            initial="hidden"
+            whileInView="visible"
+            variants={{
+              hidden: {},
+              visible: {
+                transition: { staggerChildren: 0.2 },
+              },
+            }}
+            viewport={{ once: false, amount: 0.3 }}
+          >
+            {[
+              {
+                icon: <FaAward className="experience-icon" />,
+                number: "10+",
+                text: t("about.experience.publicRepos"),
+              },
+              {
+                icon: <FaProjectDiagram className="experience-icon" />,
+                number: "5+",
+                text: t("about.experience.featuredProjects"),
+              },
+              {
+                icon: <FaUsers className="experience-icon" />,
+                number: "1+",
+                text: t("about.experience.yearsExperience"),
+              },
+            ].map((item, idx) => (
+              <motion.div
+                key={idx}
+                className="experience-card"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8 }}
+                viewport={{ once: false, amount: 0.3 }}
+              >
+                {item.icon}
+                <span className="experience-number">{item.number}</span>
+                <p className="experience-text">{item.text}</p>
+              </motion.div>
+            ))}
+          </motion.section>
+        </motion.div>
       </div>
 
-      {/* Fila 2: Bloques de enfoque */}
-      <div className="professional-focus-container">
+      {/* Bloques de enfoque */}
+      <motion.div
+        className="professional-focus-container"
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1 }}
+        viewport={{ once: false, amount: 0.3 }}
+      >
         {/* Primer bloque */}
-        <div className="professional-focus">
+        <motion.div
+          className="professional-focus"
+          initial={{ opacity: 0, x: -30 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 1 }}
+          viewport={{ once: false, amount: 0.3 }}
+        >
           <h3>{t("about.focus.title1")}</h3>
           <ul aria-labelledby="enfoque1" className="focus-list">
             {t("about.focus.list1", { returnObjects: true }).map((item, index) => (
               <li key={index}>{item}</li>
             ))}
           </ul>
-        </div>
+        </motion.div>
 
-        {/* Segundo bloque: Educación + Experiencia */}
-        <div className="professional-focus">
+        {/* Segundo bloque */}
+        <motion.div
+          className="professional-focus"
+          initial={{ opacity: 0, x: 30 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 1 }}
+          viewport={{ once: false, amount: 0.3 }}
+        >
           <h3>{t("about.timeline.title")}</h3>
 
           <div className="timeline-container">
             {/* Experiencia */}
             <div className="timeline-section">
               <h4 className="section-title">{t("about.timeline.experience.title")}</h4>
-
               {t("about.timeline.experience.items", { returnObjects: true }).map((exp, idx) => (
                 <div className="timeline-item" key={idx}>
                   <div className="timeline-icon experience-icon">🏢</div>
@@ -94,7 +165,6 @@ const About = () => {
             {/* Educación */}
             <div className="timeline-section">
               <h4 className="section-title">{t("about.timeline.education.title")}</h4>
-
               {t("about.timeline.education.items", { returnObjects: true }).map((edu, idx) => (
                 <div className="timeline-item" key={idx}>
                   <div className="timeline-icon education-icon">🎓</div>
@@ -106,10 +176,10 @@ const About = () => {
                 </div>
               ))}
             </div>
-          </div> {/* timeline-container */}
-        </div> {/* professional-focus */}
-      </div> {/* professional-focus-container */}
-    </div>
+          </div>
+        </motion.div>
+      </motion.div>
+    </motion.section>
   );
 };
 

@@ -1,15 +1,15 @@
 .hero {
-  margin-top: 130px;
-  padding: 60px 8vw 0 8vw;
+  padding: 40px 8vw 0 8vw; /* Ajustamos padding arriba */
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start; /* Subimos todo */
   text-align: left;
   overflow: hidden;
   position: relative;
   scroll-margin-top: 100px;
 }
 
+/* TEXTO PRINCIPAL */
 .text-container {
   flex: 1;
   max-width: 50%;
@@ -37,7 +37,7 @@ html.dark h1 {
   color: #fff;
 }
 
-/* TIPADO */
+/* TIPADO PROFESIÓN */
 .typing {
   font-size: 1.5rem;
   color: #00a6fb;
@@ -46,47 +46,32 @@ html.dark h1 {
   border-right: 3px solid #00a6fb;
 }
 
-/* Animación para Español */
 .typing-es {
   width: 0;
   animation: typing-es 3s steps(24) forwards, blink 0.7s infinite;
 }
 
 @keyframes typing-es {
-  from {
-    width: 0;
-  }
-  to {
-    width: 18.5ch; /* Para "Desarrollador Fullstack" */
-  }
+  from { width: 0; }
+  to { width: 18.5ch; }
 }
 
-/* Animación para Inglés */
 .typing-en {
   width: 0;
   animation: typing-en 3s steps(24) forwards, blink 0.7s infinite;
 }
 
 @keyframes typing-en {
-  from {
-    width: 0;
-  }
-  to {
-    width: 16ch; /* Para "Fullstack Developer" */
-  }
+  from { width: 0; }
+  to { width: 16ch; }
 }
 
-/* Parpadeo del cursor */
 @keyframes blink {
-  0%,
-  100% {
-    border-color: transparent;
-  }
-  50% {
-    border-color: #00a6fb;
-  }
+  0%, 100% { border-color: transparent; }
+  50% { border-color: #00a6fb; }
 }
 
+/* Párrafos */
 .text-container p {
   color: #4a4b6d;
   margin-bottom: 20px;
@@ -117,10 +102,9 @@ html.dark .text-container p {
   align-items: center;
   justify-content: center;
   height: 54px;
-  line-height: 1;
   border-radius: 6px;
   cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.3s ease, opacity 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .btn:hover,
@@ -152,7 +136,7 @@ html.dark .text-container p {
   font-size: 1.2rem;
 }
 
-/* IMAGEN */
+/* IMAGEN DEL HERO */
 .image-container {
   flex: 1;
   display: flex;
@@ -169,12 +153,12 @@ html.dark .text-container p {
   box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.3);
 }
 
-/* ICONOS SOCIALES */
+/* ICONOS REDES */
 .social-links {
   display: flex;
   justify-content: center;
   gap: 25px;
-  margin-top: 25px;
+  margin-top: 20px;
   width: 100%;
 }
 
@@ -228,50 +212,66 @@ html.dark .social-links a:hover {
   transform: translateX(-50%) scale(1);
 }
 
-/* SECCIÓN DE TECNOLOGÍAS */
+/* SECCIÓN TECNOLOGÍAS */
 .tech-stack-below {
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 40px;
-  padding: 20px 0;
+  margin-top: 15px;
+  padding: 10px 0;
 }
 
-.tech-stack-below .tech-icons {
+.tech-icons {
   display: flex;
   justify-content: center;
-  gap: 25px;
+  gap: 35px;
   flex-wrap: wrap;
   margin-bottom: 15px;
 }
 
-.tech-stack-below .tech-icons i {
+.tech-icon-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.3s ease;
+}
+
+.tech-icon-item i {
   font-size: 2.5rem;
-  color: #00a6fb;
+  color: #b8b8b9;
   opacity: 0.7;
   transition: all 0.5s ease;
 }
 
-html.dark .tech-stack-below .tech-icons i {
+.tech-name {
+  margin-top: 8px;
+  font-size: 0.9rem;
+  color: #4a4b6d;
+  font-weight: 500;
+}
+
+html.dark .tech-name {
   color: #f9f9f9;
 }
 
-.tech-stack-below .tech-icons i.active {
+.tech-icon-item .active {
   opacity: 1;
   transform: scale(1.3);
   filter: drop-shadow(0 0 8px currentColor);
 }
 
+.tech-icon-item:hover {
+  animation: techPulse 0.8s infinite;
+}
+
+/* TEXTO DE TECNOLOGÍAS */
 .tech-stack-below .tech-text {
-  align-items: center;
   text-align: center;
   width: 60%;
   color: #4a4b6d;
   font-size: 2rem;
   font-weight: 500;
-  margin-top: 15px;
-  letter-spacing: 1px;
 }
 
 html.dark .tech-stack-below .tech-text {
@@ -298,23 +298,6 @@ html.dark .location {
 
 html.dark .location i {
   color: #f9f9f9;
-}
-
-/* ANIMACIÓN DE ICONOS */
-@keyframes techPulse {
-  0% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.1);
-  }
-  100% {
-    transform: scale(1);
-  }
-}
-
-.tech-stack-below .tech-icons i:hover {
-  animation: techPulse 0.8s infinite;
 }
 
 /* RESPONSIVE */
@@ -364,15 +347,19 @@ html.dark .location i {
     margin-top: 30px;
   }
 
-  .tech-stack-below .tech-icons {
-    gap: 20px;
+  .tech-icons {
+    gap: 25px;
   }
 
-  .tech-stack-below .tech-icons i {
+  .tech-icon-item i {
     font-size: 2.2rem;
   }
 
+  .tech-name {
+    font-size: 0.8rem;
+  }
+
   .tech-stack-below .tech-text {
-    font-size: 0.9rem;
+    font-size: 1.5rem;
   }
 }

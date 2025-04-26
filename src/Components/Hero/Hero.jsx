@@ -1,8 +1,9 @@
+import { useEffect, useState } from "react";
+import { useTranslation } from "react-i18next";
+import { motion } from "framer-motion";
 import "./Hero.css";
 import foto from "../../assets/foto.png";
 import { FaWhatsapp } from "react-icons/fa";
-import { useEffect, useState } from "react";
-import { useTranslation } from "react-i18next";
 
 const Hero = () => {
   const { t, i18n } = useTranslation();
@@ -31,8 +32,22 @@ const Hero = () => {
   }, [technologies.length]);
 
   return (
-    <div className="hero" id="hero">
-      <div className="text-container">
+    <motion.section
+      className="hero"
+      id="hero"
+      initial={{ opacity: 0, y: -50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 1 }}
+      viewport={{ once: false, amount: 0.3 }}
+    >
+      {/* Text Container */}
+      <motion.div
+        className="text-container"
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 1, delay: 0.3 }}
+        viewport={{ once: false, amount: 0.3 }}
+      >
         <h1>
           <span>{t("hero.greeting")}</span> {t("hero.intro")}
         </h1>
@@ -40,7 +55,12 @@ const Hero = () => {
         <p className="location">
           <i className="fas fa-map-marker-alt"></i> {t("hero.location")}
         </p>
-        <h3 className={`typing ${i18n.language === "en" ? "typing-en" : "typing-es"}`}>
+
+        <h3
+          className={`typing ${
+            i18n.language === "en" ? "typing-en" : "typing-es"
+          }`}
+        >
           {t("hero.profession")}
         </h3>
 
@@ -79,23 +99,46 @@ const Hero = () => {
           </div>
         </div>
 
+        {/* Tech Stack */}
         <div className="tech-stack-below">
           <div className="tech-icons">
             {technologies.map((tech, index) => (
-              <i
+              <motion.div
                 key={tech.name}
-                className={`${tech.icon} ${index === currentTech ? "active" : ""}`}
-                title={tech.name}
-                style={{ color: index === currentTech ? tech.color : "" }}
-              />
+                className="tech-icon-item"
+                whileHover={{ scale: 1.2 }}
+                transition={{ type: "spring", stiffness: 300 }}
+              >
+                <i
+                  className={`${tech.icon} ${
+                    index === currentTech ? "active" : ""
+                  }`}
+                  title={tech.name}
+                  style={{ color: index === currentTech ? tech.color : "" }}
+                />
+                <p className="tech-name">{tech.name}</p>
+              </motion.div>
             ))}
           </div>
           <p className="tech-text">{t("hero.tech_label")}</p>
         </div>
-      </div>
+      </motion.div>
 
-      <div className="image-container">
-        <img src={foto} alt="Foto de Santiago Quintero" />
+      {/* Image Container */}
+      <motion.div
+        className="image-container"
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 1, delay: 0.5 }}
+        viewport={{ once: false, amount: 0.3 }}
+      >
+        <motion.img
+          src={foto}
+          alt="Foto de Santiago Quintero"
+          whileHover={{ scale: 1.05 }}
+          transition={{ duration: 0.5 }}
+        />
+
         <div className="social-links">
           <a
             href="http://www.linkedin.com/in/santiago-david-garcia-quintero-218b35361"
@@ -118,8 +161,8 @@ const Hero = () => {
             <i className="fab fa-github"></i>
           </a>
         </div>
-      </div>
-    </div>
+      </motion.div>
+    </motion.section>
   );
 };
 

@@ -22,7 +22,7 @@ const ContactForm = () => {
 
                 <div className="contact-form">
                     <h2>Envía tu Mensaje</h2>
-                    <form action="https://formspree.io/f/mdkezlbv" method="POST">
+                    <form action="https://formspree.io/f/meogoabz" method="POST">
                         <input type="text" name="name" placeholder="Nombres" required />
                         <input type="email" name="email" placeholder="Correo Electronico" required />
                         <textarea name="message"  placeholder="Mensaje" required></textarea>

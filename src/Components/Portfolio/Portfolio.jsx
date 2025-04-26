@@ -25,14 +25,16 @@ const portfolioItems = [
     id: 3,
     image: marketplace,
     title: "Marketplace",
-    description: "Marketplace en PHP8/MySQL: API RESTful, pasarelas de pago, registro de usuarios, interfaz conversiva y sistema multivendedor.",
+    description:
+      "Marketplace en PHP8/MySQL: API RESTful, pasarelas de pago, registro de usuarios, interfaz conversiva y sistema multivendedor.",
     demoLink: "https://github.com/S4nti4goCoder/marketplace_php",
   },
   {
     id: 4,
     image: gestor,
     title: "Gestor de Archivos",
-    description: "Sistema de documentos desarrollado en PHP/CodeIgniter 4/MySQL para creación, edición, organización y búsqueda avanzada de archivos, con arquitectura MVC escalable.",
+    description:
+      "Sistema de documentos desarrollado en PHP/CodeIgniter 4/MySQL para creación, edición, organización y búsqueda avanzada de archivos, con arquitectura MVC escalable.",
     demoLink: "https://github.com/S4nti4goCoder/gestor-archivos",
   },
 ];

@@ -18,7 +18,6 @@ const Hero = () => {
     { name: "Laravel", icon: "fab fa-laravel", color: "#f53003" },
     { name: "Git", icon: "fab fa-git-alt", color: "#F05032" },
     { name: "Bootstrap", icon: "fab fa-bootstrap", color: "#7952B3" },
-    { name: "Tailwind CSS", icon: "fab fa-css3-alt", color: "#06B6D4" },
     { name: "Figma", icon: "fab fa-figma", color: "#F24E1E" },
   ];
 
@@ -34,13 +33,17 @@ const Hero = () => {
       <div className="text-container">
         <span>Hola Soy,</span>
         <h1>Santiago Quintero</h1>
+        <p className="location">
+          <i className="fas fa-map-marker-alt"></i> Bogotá, Colombia
+        </p>
         <h3 className="typing">Desarrollador Fullstack</h3>
         <p>
           Soy un apasionado del desarrollo Fontend y Backend con experiencia en{" "}
-          <strong>Javascript</strong>, <strong>React.js</strong>, <strong>Angular.js</strong>, <strong>MySQL</strong>, <strong>PHP</strong>{" "}
-          y <strong>Laravel</strong>. Me especializo en crear soluciones
-          digitales modernas, rápidas y escalables, con enfoque en la
-          experiencia del usuario y la calidad del código.
+          <strong>Javascript</strong>, <strong>React.js</strong>,{" "}
+          <strong>Angular.js</strong>, <strong>MySQL</strong>,{" "}
+          <strong>PHP</strong> y <strong>Laravel</strong>. Me especializo en
+          crear soluciones digitales modernas, rápidas y escalables, con enfoque
+          en la experiencia del usuario y la calidad del código.
         </p>
 
         <div className="hero-buttons">
@@ -51,7 +54,9 @@ const Hero = () => {
             className="btn"
           >
             ¡Hablemos!
-            <FaWhatsapp style={{ marginLeft: "8px", fontSize: "1.5rem", color: "#fff" }} />
+            <FaWhatsapp
+              style={{ marginLeft: "8px", fontSize: "1.5rem", color: "#fff" }}
+            />
           </a>
 
           <div className="btn-split-wrapper">

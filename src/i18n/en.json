@@ -1,0 +1,134 @@
+{
+  "navbar": {
+    "home": "Home",
+    "about": "About",
+    "skills": "Skills",
+    "portfolio": "Portfolio",
+    "contact": "Contact"
+  },
+  "hero": {
+    "greeting": "Hi!",
+    "intro": "I'm Santiago Quintero",
+    "location": "Bogotá, Colombia",
+    "profession": "Fullstack Developer",
+    "description": "I am passionate about Frontend and Backend development with experience in Javascript, React.js, Angular.js, MySQL, PHP, and Laravel. I specialize in building modern, fast, and scalable digital solutions, focusing on user experience and code quality.",
+    "cta": "Let's talk!",
+    "cv_view": "View Resume",
+    "cv_download": "Download CV",
+    "tech_label": "Technologies I use"
+  },
+  "about": {
+    "overlayText": "Developing innovative solutions",
+    "title1": "About",
+    "title2": "Me",
+    "description": "Frontend and Backend developer experienced in multiple technologies. Passionate about building efficient and scalable web applications. Self-taught, committed to continuous learning and best development practices.",
+    "experience": {
+      "publicRepos": "Public Repositories",
+      "featuredProjects": "Featured Projects",
+      "yearsExperience": "Years of Experience in projects"
+    },
+    "focus": {
+      "title1": "My Professional Focus",
+      "list1": [
+        "Full-stack web application development (frontend and backend)",
+        "Scalable and maintainable architectures",
+        "Focus on performance and user experience",
+        "Implementation of best coding practices",
+        "Custom solutions for specific needs"
+      ],
+      "title2": "Other Areas of Focus",
+      "list2": [
+        "Integration of external APIs and third-party services",
+        "Business process automation",
+        "Development of internal management systems",
+        "Database optimization and query tuning",
+        "Development of custom administration panels"
+      ]
+    },
+    "timeline": {
+      "title": "Experience and Education",
+      "experience": {
+        "title": "Experience",
+        "items": [
+          {
+            "title": "Frontend Developer - Personal Project",
+            "date": "2024 - Present",
+            "description": "Developing modern web applications using React and Next.js."
+          },
+          {
+            "title": "Backend Developer - Freelance Project",
+            "date": "2023",
+            "description": "Building RESTful APIs and managing MySQL databases."
+          }
+        ]
+      },
+      "education": {
+        "title": "Education",
+        "items": [
+          {
+            "title": "Currently",
+            "date": "December 7th, 2023",
+            "description": "Continuously learning new skills."
+          },
+          {
+            "title": "Diploma in Web Development with NEXTJS",
+            "date": "August 7th, 2023",
+            "description": "Learned Next.js, Tailwind, databases, and TypeScript."
+          },
+          {
+            "title": "Diploma in Web Development with JavaScript",
+            "date": "February 27th, 2023",
+            "description": "Learned HTML, CSS, JavaScript, and SQL databases."
+          }
+        ]
+      }
+    }
+  },
+  "skills": {
+    "title": "My Skills",
+    "frontend": {
+      "title": "Frontend",
+      "description": "I specialize in Frontend development to create modern and functional websites using technologies like HTML, CSS, JavaScript, React, Angular, and Laravel. I always focus on providing optimized and scalable solutions."
+    },
+    "backend": {
+      "title": "Backend",
+      "description": "Backend applications development using Node.js, ensuring smooth integration with databases and APIs to offer optimal performance and an exceptional user experience."
+    },
+    "webapps": {
+      "title": "Web Applications",
+      "description": "Building customized web applications with ReactJS, focusing on creating dynamic, fast, and responsive user experiences."
+    }
+  },
+  "portfolio": {
+    "sectionTitle": "Portfolio",
+    "ecommerce": {
+      "title": "Ecommerce",
+      "description": "E-commerce project in PHP with modular (MVC) architecture to manage products, users, and orders. Includes a REST API for CRUD and an admin panel with AdminLTE 3.2.0. Focused on scalability and code organization."
+    },
+    "pos": {
+      "title": "Point of Sale System (POS)",
+      "description": "POS system in PHP (MVC) with multi-branch support, roles, inventory management, billing (Colombia), reports, and daily cash management. Practical system for development and commercialization."
+    },
+    "marketplace": {
+      "title": "Marketplace",
+      "description": "Marketplace built in PHP8/MySQL: RESTful API, payment gateways, user registration, conversational interface, and multivendor system."
+    },
+    "filemanager": {
+      "title": "File Manager",
+      "description": "Document management system developed with PHP/CodeIgniter 4/MySQL for creating, editing, organizing, and advanced searching of files, built with scalable MVC architecture."
+    },
+    "viewGithub": "View on GitHub"
+  },
+  "contact": {
+    "title": "Contact",
+    "info_title": "CONTACT INFORMATION",
+    "form_title": "Send your Message",
+    "name_placeholder": "Name",
+    "email_placeholder": "Email",
+    "message_placeholder": "Message",
+    "button": "Send Message"
+  },
+  "footer": {
+    "rights": "All rights reserved."
+  }
+}

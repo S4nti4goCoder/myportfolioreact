@@ -1,45 +1,85 @@
-import "./Navbar.css"
-import logo_light from "../../assets/logo_light.png"
-import logo_dark from "../../assets/logo_dark.png"
-import { useContext, useState } from "react"
-import ThemeToggle from "../ThemeToggle/ThemeToggle"
-import { ThemeContext } from "../../ThemeContext/ThemeContext"
-
+import "./Navbar.css";
+import logo_light from "../../assets/logo_light.png";
+import logo_dark from "../../assets/logo_dark.png";
+import { useContext, useState } from "react";
+import ThemeToggle from "../ThemeToggle/ThemeToggle";
+import { ThemeContext } from "../../ThemeContext/ThemeContext";
+import { useTranslation } from "react-i18next";
 
 const Navbar = () => {
-  const [menuOpen, setMenuOpen] = useState(false)
-  const {theme} = useContext(ThemeContext)
+  const [menuOpen, setMenuOpen] = useState(false);
+  const { theme } = useContext(ThemeContext);
+  const { t, i18n } = useTranslation(); // También traemos "t" aquí
 
-  const handleScoll = (e, sectionId) => {
+  const handleScroll = (e, sectionId) => {
     e.preventDefault();
-    const section = document.getElementById(sectionId)
+    const section = document.getElementById(sectionId);
     if (section) {
-      section.scrollIntoView({ behavior: "smooth", block: "center" })
+      section.scrollIntoView({ behavior: "smooth", block: "center" });
     }
-    setMenuOpen(false)
-  }
+    setMenuOpen(false);
+  };
 
   return (
-     <nav>
-        <img src={theme === "light" ? logo_light : logo_dark} alt="logo" className="logo" />
-        <ul className={menuOpen ? "active" : ""}>
-            <li><a href="#" onClick={(e)=> handleScoll(e, "hero")} >Home</a></li>
-            <li><a href="#about"  onClick={(e)=> handleScoll(e, "about")} >Sobre mi</a></li>
-            <li><a href="#skills"  onClick={(e)=> handleScoll(e, "skills")}  >Habilidades</a></li>
-            <li><a href="#portfolio"  onClick={(e)=> handleScoll(e, "portfolio")}  >Portafolio</a></li>
-            <li><a href="#contact"  onClick={(e)=> handleScoll(e, "contact")}  >Contacto</a></li>
-            <i className="fa-solid fa-xmark"
-            onClick={()=> setMenuOpen(false)}
-            ></i>
-        </ul>
+    <nav>
+      <img
+        src={theme === "light" ? logo_light : logo_dark}
+        alt="logo"
+        className="logo"
+      />
 
-        <ThemeToggle/>
+      <ul className={menuOpen ? "active" : ""}>
+        <li>
+          <a href="#" onClick={(e) => handleScroll(e, "hero")}>
+            {t("navbar.home")}
+          </a>
+        </li>
+        <li>
+          <a href="#about" onClick={(e) => handleScroll(e, "about")}>
+            {t("navbar.about")}
+          </a>
+        </li>
+        <li>
+          <a href="#skills" onClick={(e) => handleScroll(e, "skills")}>
+            {t("navbar.skills")}
+          </a>
+        </li>
+        <li>
+          <a href="#portfolio" onClick={(e) => handleScroll(e, "portfolio")}>
+            {t("navbar.portfolio")}
+          </a>
+        </li>
+        <li>
+          <a href="#contact" onClick={(e) => handleScroll(e, "contact")}>
+            {t("navbar.contact")}
+          </a>
+        </li>
+        <i className="fa-solid fa-xmark" onClick={() => setMenuOpen(false)}></i>
+      </ul>
 
-            <i className="fa-solid fa-bars"
-            onClick={()=> setMenuOpen(true)}
-            ></i>
-     </nav>
-  )
-}
+      {/* Controles de tema e idioma */}
+      <div className="navbar-controls">
+        <ThemeToggle />
 
-export default Navbar
+        <div className="language-toggle">
+          <button
+            onClick={() => i18n.changeLanguage("es")}
+            className={i18n.language === "es" ? "active-lang" : ""}
+          >
+            ES
+          </button>
+          <button
+            onClick={() => i18n.changeLanguage("en")}
+            className={i18n.language === "en" ? "active-lang" : ""}
+          >
+            EN
+          </button>
+        </div>
+      </div>
+
+      <i className="fa-solid fa-bars" onClick={() => setMenuOpen(true)}></i>
+    </nav>
+  );
+};
+
+export default Navbar;

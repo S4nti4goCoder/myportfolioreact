@@ -63,14 +63,14 @@
   flex: 1;
 }
 
-.about-infos h1 {
+.about-infos h2 {
   font-size: 3rem;
   color: #232155;
   margin-bottom: 25px;
   position: relative;
 }
 
-.about-infos h1::after {
+.about-infos h2::after {
   content: "";
   position: absolute;
   bottom: -10px;
@@ -255,7 +255,7 @@
   color: #4a4b6d;
 }
 
-html.dark .about-infos h1,
+html.dark .about-infos h2,
 html.dark .description {
   color: #f9f9f9;
 }
@@ -297,7 +297,7 @@ html.dark .timeline-content h5 {
   .about-infos {
     max-width: 100%;
   }
-  .about-infos h1::after {
+  .about-infos h2::after {
     left: 50%;
     transform: translateX(-50%);
   }

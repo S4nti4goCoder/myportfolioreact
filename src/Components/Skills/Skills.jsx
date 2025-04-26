@@ -1,37 +1,30 @@
 import "./Skills.css";
+import { useTranslation } from "react-i18next";
 
 const Skills = () => {
+  const { t } = useTranslation();
+
   return (
     <div className="skills" id="skills">
-      <h1>Mis Habilidades</h1>
+      <h1>{t("skills.title")}</h1>
+
       <div className="skills-base">
         <div className="skills-box">
           <i className="fas fa-laptop-code"></i>
-          <h3>Frontend</h3>
-          <p>
-            Me especializo en desarrollo Frontend para crear sitios modernos y
-            funcionales utilizando tecnologías como HTML, CSS, JavaScript,
-            React, Angular y Laravel. Siempre me enfoco en ofrecer soluciones optimizadas
-            y escalables.
-          </p>
+          <h3>{t("skills.frontend.title")}</h3>
+          <p>{t("skills.frontend.description")}</p>
         </div>
+
         <div className="skills-box">
           <i className="fas fa-drafting-compass"></i>
-          <h3>Backend</h3>
-          <p>
-            Desarrollo de aplicaciones backend utilizando Node.js,
-            asegurando una integración fluida con bases de datos y APIs para
-            ofrecer un rendimiento óptimo y una experiencia de usuario
-            excepcional.
-          </p>
+          <h3>{t("skills.backend.title")}</h3>
+          <p>{t("skills.backend.description")}</p>
         </div>
+
         <div className="skills-box">
           <i className="fab fa-react"></i>
-          <h3>Aplicaciones Web</h3>
-          <p>
-            Desarrollo aplicaciones web personalizadas con ReactJS, enfocándome
-            en crear experiencias de usuario dinámicas, rápidas y responsivas.
-          </p>
+          <h3>{t("skills.webapps.title")}</h3>
+          <p>{t("skills.webapps.description")}</p>
         </div>
       </div>
     </div>

@@ -1,15 +1,15 @@
 .hero {
-  padding: 40px 8vw 0 8vw; /* Ajustamos padding arriba */
+  padding: 40px 8vw 0 8vw;
   display: flex;
   justify-content: space-between;
-  align-items: flex-start; /* Subimos todo */
+  align-items: flex-start;
   text-align: left;
   overflow: hidden;
   position: relative;
   scroll-margin-top: 100px;
 }
 
-/* TEXTO PRINCIPAL */
+/* ====== TEXTOS ====== */
 .text-container {
   flex: 1;
   max-width: 50%;
@@ -34,10 +34,9 @@ html.dark .text-container span {
 }
 
 html.dark h1 {
-  color: #fff;
+  color: #ffffff;
 }
 
-/* TIPADO PROFESIÓN */
 .typing {
   font-size: 1.5rem;
   color: #00a6fb;
@@ -51,14 +50,14 @@ html.dark h1 {
   animation: typing-es 3s steps(24) forwards, blink 0.7s infinite;
 }
 
-@keyframes typing-es {
-  from { width: 0; }
-  to { width: 18.5ch; }
-}
-
 .typing-en {
   width: 0;
   animation: typing-en 3s steps(24) forwards, blink 0.7s infinite;
+}
+
+@keyframes typing-es {
+  from { width: 0; }
+  to { width: 18.5ch; }
 }
 
 @keyframes typing-en {
@@ -71,7 +70,6 @@ html.dark h1 {
   50% { border-color: #00a6fb; }
 }
 
-/* Párrafos */
 .text-container p {
   color: #4a4b6d;
   margin-bottom: 20px;
@@ -81,7 +79,7 @@ html.dark .text-container p {
   color: #f9f9f9;
 }
 
-/* BOTONES */
+/* ====== BOTONES ====== */
 .hero-buttons {
   display: flex;
   flex-wrap: wrap;
@@ -89,6 +87,30 @@ html.dark .text-container p {
   margin-top: 20px;
 }
 
+.whatsapp-button {
+  background-color: transparent;
+  color: #25d366;
+  padding: 15px 30px;
+  font-size: 1.2rem;
+  border: 2px solid #25d366;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 54px;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.whatsapp-button:hover {
+  background-color: #25d366;
+  color: #fff;
+  transform: translateY(-3px);
+}
+
+/* Botones CV */
 .btn,
 .btn-left,
 .btn-right {
@@ -104,20 +126,19 @@ html.dark .text-container p {
   height: 54px;
   border-radius: 6px;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: all 0.4s ease;
 }
 
 .btn:hover,
 .btn-left:hover,
 .btn-right:hover {
-  background-color: #008ad1;
-  transform: translateY(-3px);
-  opacity: 0.9;
+  transform: scale(1.05);
+  background-color: #0095e3;
+  box-shadow: 0 6px 15px rgba(0, 166, 251, 0.4);
 }
 
 .btn-split-wrapper {
   display: flex;
-  overflow: hidden;
   border-radius: 6px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
@@ -130,13 +151,67 @@ html.dark .text-container p {
 .btn-right {
   padding: 15px;
   border-radius: 0 6px 6px 0;
+  position: relative;
 }
 
-.btn-right i {
-  font-size: 1.2rem;
+/* ====== TOOLTIP ====== */
+/* Tooltip para botones de redes (arriba) */
+.tooltip-top {
+  position: relative;
 }
 
-/* IMAGEN DEL HERO */
+.tooltip-top::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  bottom: 130%;
+  left: 50%;
+  transform: translateX(-50%) scale(0.9);
+  background-color: #333;
+  color: #fff;
+  padding: 6px 10px;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  z-index: 100;
+}
+
+.tooltip-top:hover::after {
+  opacity: 1;
+  transform: translateX(-50%) scale(1);
+}
+
+/* Tooltip para botón de descargar (a la derecha) */
+.tooltip-right {
+  position: relative;
+}
+
+.tooltip-right::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  top: 50%;
+  left: 120%;
+  transform: translateY(-50%) scale(0.9);
+  background-color: #333;
+  color: #fff;
+  padding: 6px 10px;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  z-index: 100;
+}
+
+.tooltip-right:hover::after {
+  opacity: 1;
+  transform: translateY(-50%) scale(1);
+}
+
+/* ====== FOTO ====== */
 .image-container {
   flex: 1;
   display: flex;
@@ -153,7 +228,7 @@ html.dark .text-container p {
   box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.3);
 }
 
-/* ICONOS REDES */
+/* ====== REDES SOCIALES ====== */
 .social-links {
   display: flex;
   justify-content: center;
@@ -182,37 +257,7 @@ html.dark .social-links a:hover {
   color: #00a6fb;
 }
 
-/* TOOLTIP */
-.tooltip {
-  position: relative;
-  display: inline-block;
-  cursor: pointer;
-}
-
-.tooltip::after {
-  content: attr(data-tooltip);
-  position: absolute;
-  bottom: 130%;
-  left: 50%;
-  transform: translateX(-50%) scale(0.9);
-  background-color: #333;
-  color: #fff;
-  padding: 6px 10px;
-  border-radius: 6px;
-  font-size: 0.8rem;
-  white-space: nowrap;
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.3s ease, transform 0.3s ease;
-  z-index: 100;
-}
-
-.tooltip:hover::after {
-  opacity: 1;
-  transform: translateX(-50%) scale(1);
-}
-
-/* SECCIÓN TECNOLOGÍAS */
+/* ====== TECNOLOGÍAS ====== */
 .tech-stack-below {
   width: 100%;
   display: flex;
@@ -244,6 +289,16 @@ html.dark .social-links a:hover {
   transition: all 0.5s ease;
 }
 
+.tech-icon-item .active {
+  opacity: 1;
+  transform: scale(1.3);
+  filter: drop-shadow(0 0 8px currentColor);
+}
+
+.tech-icon-item:hover {
+  animation: techPulse 0.8s infinite;
+}
+
 .tech-name {
   margin-top: 8px;
   font-size: 0.9rem;
@@ -255,18 +310,13 @@ html.dark .tech-name {
   color: #f9f9f9;
 }
 
-.tech-icon-item .active {
-  opacity: 1;
-  transform: scale(1.3);
-  filter: drop-shadow(0 0 8px currentColor);
+@keyframes techPulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
 }
 
-.tech-icon-item:hover {
-  animation: techPulse 0.8s infinite;
-}
-
-/* TEXTO DE TECNOLOGÍAS */
-.tech-stack-below .tech-text {
+.tech-text {
   text-align: center;
   width: 60%;
   color: #4a4b6d;
@@ -274,11 +324,11 @@ html.dark .tech-name {
   font-weight: 500;
 }
 
-html.dark .tech-stack-below .tech-text {
+html.dark .tech-text {
   color: #f9f9f9;
 }
 
-/* UBICACIÓN */
+/* ====== UBICACIÓN ====== */
 .location {
   display: flex;
   align-items: center;
@@ -300,7 +350,7 @@ html.dark .location i {
   color: #f9f9f9;
 }
 
-/* RESPONSIVE */
+/* ====== RESPONSIVE ====== */
 @media (max-width: 768px) {
   .hero {
     flex-direction: column;
@@ -323,7 +373,8 @@ html.dark .location i {
 
   .btn,
   .btn-left,
-  .btn-right {
+  .btn-right,
+  .whatsapp-button {
     width: 100%;
     justify-content: center;
   }
@@ -337,10 +388,6 @@ html.dark .location i {
     margin-top: 20px;
     margin-bottom: 30px;
     gap: 20px;
-  }
-
-  .social-links a {
-    font-size: 1.8rem;
   }
 
   .tech-stack-below {

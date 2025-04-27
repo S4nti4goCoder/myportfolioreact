@@ -9,7 +9,7 @@ import { useTranslation } from "react-i18next";
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const { theme } = useContext(ThemeContext);
-  const { t, i18n } = useTranslation(); // También traemos "t" aquí
+  const { t, i18n } = useTranslation();
 
   const handleScroll = (e, sectionId) => {
     e.preventDefault();
@@ -22,15 +22,18 @@ const Navbar = () => {
 
   return (
     <nav>
+      {/* Logo dinámico */}
       <img
         src={theme === "light" ? logo_light : logo_dark}
-        alt="logo"
+        alt="Logo Santiago Developer"
         className="logo"
+        loading="lazy"
       />
 
+      {/* Menú de navegación */}
       <ul className={menuOpen ? "active" : ""}>
         <li>
-          <a href="#" onClick={(e) => handleScroll(e, "hero")}>
+          <a href="#hero" onClick={(e) => handleScroll(e, "hero")}>
             {t("navbar.home")}
           </a>
         </li>
@@ -60,7 +63,6 @@ const Navbar = () => {
       {/* Controles de tema e idioma */}
       <div className="navbar-controls">
         <ThemeToggle />
-
         <div className="language-toggle">
           <button
             onClick={() => i18n.changeLanguage("es")}

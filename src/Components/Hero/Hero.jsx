@@ -3,7 +3,7 @@ import { useTranslation } from "react-i18next";
 import { motion } from "framer-motion";
 import "./Hero.css";
 import foto from "../../assets/foto.png";
-import { FaWhatsapp } from "react-icons/fa";
+import { FaWhatsapp, FaFileAlt, FaDownload } from "react-icons/fa";
 
 const Hero = () => {
   const { t, i18n } = useTranslation();
@@ -29,7 +29,7 @@ const Hero = () => {
       setCurrentTech((prev) => (prev + 1) % technologies.length);
     }, 1500);
     return () => clearInterval(interval);
-  }, [technologies.length]);
+  }, []);
 
   return (
     <motion.section
@@ -40,66 +40,66 @@ const Hero = () => {
       transition={{ duration: 1 }}
       viewport={{ once: false, amount: 0.3 }}
     >
-      {/* Text Container */}
       <motion.div
         className="text-container"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ duration: 1, delay: 0.3 }}
-        viewport={{ once: false, amount: 0.3 }}
       >
         <h1>
           <span>{t("hero.greeting")}</span> {t("hero.intro")}
         </h1>
 
-        <p className="location">
-          <i className="fas fa-map-marker-alt"></i> {t("hero.location")}
-        </p>
+        <h2 className="location">
+          <i className="fas fa-map-marker-alt" aria-hidden="true"></i> {t("hero.location")}
+        </h2>
 
-        <h3
-          className={`typing ${
-            i18n.language === "en" ? "typing-en" : "typing-es"
-          }`}
-        >
+        <h3 className={`typing ${i18n.language === "en" ? "typing-en" : "typing-es"}`}>
           {t("hero.profession")}
         </h3>
 
         <p>{t("hero.description")}</p>
 
+        {/* Botones */}
         <div className="hero-buttons">
+          {/* WhatsApp */}
           <a
             href="https://wa.me/573154488668"
             target="_blank"
             rel="noopener noreferrer"
-            className="btn"
+            className="whatsapp-button"
+            aria-label="Contactar por WhatsApp"
           >
+            <FaWhatsapp style={{ marginRight: "8px", fontSize: "1.5rem" }} />
             {t("hero.cta")}
-            <FaWhatsapp
-              style={{ marginLeft: "8px", fontSize: "1.5rem", color: "#fff" }}
-            />
           </a>
 
+          {/* Botones de CV */}
           <div className="btn-split-wrapper">
             <a
               href="/cv_santiago.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className="btn-left"
+              aria-label="Ver CV Santiago"
             >
+              <FaFileAlt style={{ marginRight: "8px", fontSize: "1.2rem" }} />
               {t("hero.cv_view")}
             </a>
+
             <a
               href="/cv_santiago.pdf"
               download
-              className="btn-right tooltip"
+              className="btn-right tooltip-right"
               data-tooltip={t("hero.cv_download")}
+              aria-label="Descargar CV Santiago"
             >
-              <i className="fas fa-download"></i>
+              <FaDownload style={{ fontSize: "1.2rem" }} />
             </a>
           </div>
         </div>
 
-        {/* Tech Stack */}
+        {/* Tecnologías */}
         <div className="tech-stack-below">
           <div className="tech-icons">
             {technologies.map((tech, index) => (
@@ -110,10 +110,9 @@ const Hero = () => {
                 transition={{ type: "spring", stiffness: 300 }}
               >
                 <i
-                  className={`${tech.icon} ${
-                    index === currentTech ? "active" : ""
-                  }`}
+                  className={`${tech.icon} ${index === currentTech ? "active" : ""}`}
                   title={tech.name}
+                  aria-hidden="true"
                   style={{ color: index === currentTech ? tech.color : "" }}
                 />
                 <p className="tech-name">{tech.name}</p>
@@ -124,28 +123,27 @@ const Hero = () => {
         </div>
       </motion.div>
 
-      {/* Image Container */}
+      {/* Foto y redes */}
       <motion.div
         className="image-container"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ duration: 1, delay: 0.5 }}
-        viewport={{ once: false, amount: 0.3 }}
       >
         <motion.img
           src={foto}
-          alt="Foto de Santiago Quintero"
+          alt="Foto profesional de Santiago Quintero, desarrollador FullStack"
+          loading="lazy"
           whileHover={{ scale: 1.05 }}
           transition={{ duration: 0.5 }}
         />
 
         <div className="social-links">
           <a
-            href="http://www.linkedin.com/in/santiago-david-garcia-quintero-218b35361"
+            href="https://linkedin.com/in/santiago-david-garcia-quintero-218b35361"
             target="_blank"
             rel="noopener noreferrer"
-            aria-label="LinkedIn"
-            className="tooltip"
+            className="tooltip-top"
             data-tooltip="LinkedIn"
           >
             <i className="fab fa-linkedin"></i>
@@ -154,8 +152,7 @@ const Hero = () => {
             href="https://github.com/S4nti4goCoder"
             target="_blank"
             rel="noopener noreferrer"
-            aria-label="GitHub"
-            className="tooltip"
+            className="tooltip-top"
             data-tooltip="GitHub"
           >
             <i className="fab fa-github"></i>

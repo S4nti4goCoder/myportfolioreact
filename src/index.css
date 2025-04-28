@@ -24,3 +24,14 @@ html.dark body {
   padding-top: 120px;
   padding-bottom: 120px;
 }
+
+@media (max-width: 768px) {
+  #hero,
+  #about,
+  #skills,
+  #portfolio,
+  #contact {
+    padding-top: 60px; /* Reducir el padding superior en móviles */
+    padding-bottom: 60px; /* Reducir el padding inferior */
+  }
+}

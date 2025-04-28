@@ -350,13 +350,12 @@ html.dark .location i {
   color: #f9f9f9;
 }
 
-/* ====== RESPONSIVE ====== */
 @media (max-width: 768px) {
   .hero {
-    flex-direction: column;
+    flex-direction: column-reverse; /* 👈 Cambiado */
     text-align: center;
-    height: auto;
     padding-top: 50px;
+    height: auto;
   }
 
   .text-container {

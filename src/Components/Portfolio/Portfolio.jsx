@@ -12,14 +12,14 @@ import "swiper/css/pagination";
 
 import "./Portfolio.css";
 
-import ecommerce1 from "../../assets/ecommerce.png";
-import ecommerce2 from "../../assets/ecommerce.png";
-import pos1 from "../../assets/pos.png";
-import pos2 from "../../assets/pos.png";
-import marketplace1 from "../../assets/marketplace.png";
-import marketplace2 from "../../assets/marketplace.png";
-import gestor1 from "../../assets/gestor.png";
-import gestor2 from "../../assets/gestor.png";
+import ecommerce1 from "../../assets/ecommerce.webp";
+import ecommerce2 from "../../assets/ecommerce.webp";
+import pos1 from "../../assets/pos.webp";
+import pos2 from "../../assets/pos.webp";
+import marketplace1 from "../../assets/marketplace.webp";
+import marketplace2 from "../../assets/marketplace.webp";
+import gestor1 from "../../assets/gestor.webp";
+import gestor2 from "../../assets/gestor.webp";
 
 const Portfolio = () => {
   const { t } = useTranslation();

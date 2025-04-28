@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { motion } from "framer-motion";
 import "./Hero.css";
-import foto from "../../assets/foto.png";
+import foto from "../../assets/foto.webp";
 import { FaWhatsapp, FaFileAlt, FaDownload } from "react-icons/fa";
 
 const Hero = () => {
@@ -51,10 +51,15 @@ const Hero = () => {
         </h1>
 
         <h2 className="location">
-          <i className="fas fa-map-marker-alt" aria-hidden="true"></i> {t("hero.location")}
+          <i className="fas fa-map-marker-alt" aria-hidden="true"></i>{" "}
+          {t("hero.location")}
         </h2>
 
-        <h3 className={`typing ${i18n.language === "en" ? "typing-en" : "typing-es"}`}>
+        <h3
+          className={`typing ${
+            i18n.language === "en" ? "typing-en" : "typing-es"
+          }`}
+        >
           {t("hero.profession")}
         </h3>
 
@@ -110,7 +115,9 @@ const Hero = () => {
                 transition={{ type: "spring", stiffness: 300 }}
               >
                 <i
-                  className={`${tech.icon} ${index === currentTech ? "active" : ""}`}
+                  className={`${tech.icon} ${
+                    index === currentTech ? "active" : ""
+                  }`}
                   title={tech.name}
                   aria-hidden="true"
                   style={{ color: index === currentTech ? tech.color : "" }}

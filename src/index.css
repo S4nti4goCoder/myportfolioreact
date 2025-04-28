@@ -18,20 +18,18 @@ html.dark body {
 #hero,
 #about,
 #skills,
-#portfolio,
-#contact {
+#portfolio{
   scroll-margin-top: 100px; /* ajusta al alto real de tu navbar */
-  padding-top: 120px;
-  padding-bottom: 120px;
+  padding-top: 80px;
+  padding-bottom: 80px;
 }
 
 @media (max-width: 768px) {
   #hero,
   #about,
   #skills,
-  #portfolio,
-  #contact {
-    padding-top: 60px; /* Reducir el padding superior en móviles */
-    padding-bottom: 60px; /* Reducir el padding inferior */
+  #portfolio{
+    padding-top: 30px; /* Reducir el padding superior en móviles */
+    padding-bottom: 30px; /* Reducir el padding inferior */
   }
 }

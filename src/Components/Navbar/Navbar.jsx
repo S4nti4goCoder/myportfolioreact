@@ -1,6 +1,6 @@
 import "./Navbar.css";
-import logo_light from "../../assets/logo_light.png";
-import logo_dark from "../../assets/logo_dark.png";
+import logo_light from "../../assets/logo_light.webp";
+import logo_dark from "../../assets/logo_dark.webp";
 import { useContext, useState } from "react";
 import ThemeToggle from "../ThemeToggle/ThemeToggle";
 import { ThemeContext } from "../../ThemeContext/ThemeContext";

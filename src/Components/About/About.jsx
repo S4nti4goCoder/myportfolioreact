@@ -36,6 +36,8 @@ const About = () => {
             alt="Persona programando"
             className="coding-gif"
             loading="lazy"
+            width="500"
+            height="500"
           />
           <div className="gif-overlay">
             <FaLaptopCode className="overlay-icon" />
@@ -52,7 +54,8 @@ const About = () => {
           viewport={{ once: false, amount: 0.3 }}
         >
           <h2>
-            {t("about.title1")} <span className="highlight">{t("about.title2")}</span>
+            {t("about.title1")}{" "}
+            <span className="highlight">{t("about.title2")}</span>
           </h2>
 
           <motion.p
@@ -130,9 +133,11 @@ const About = () => {
         >
           <h3>{t("about.focus.title1")}</h3>
           <ul aria-labelledby="enfoque1" className="focus-list">
-            {t("about.focus.list1", { returnObjects: true }).map((item, index) => (
-              <li key={index}>{item}</li>
-            ))}
+            {t("about.focus.list1", { returnObjects: true }).map(
+              (item, index) => (
+                <li key={index}>{item}</li>
+              )
+            )}
           </ul>
         </motion.div>
 
@@ -149,8 +154,12 @@ const About = () => {
           <div className="timeline-container">
             {/* Experiencia */}
             <div className="timeline-section">
-              <h4 className="section-title">{t("about.timeline.experience.title")}</h4>
-              {t("about.timeline.experience.items", { returnObjects: true }).map((exp, idx) => (
+              <h4 className="section-title">
+                {t("about.timeline.experience.title")}
+              </h4>
+              {t("about.timeline.experience.items", {
+                returnObjects: true,
+              }).map((exp, idx) => (
                 <div className="timeline-item" key={idx}>
                   <div className="timeline-icon experience-icon">🏢</div>
                   <div className="timeline-content">
@@ -164,17 +173,21 @@ const About = () => {
 
             {/* Educación */}
             <div className="timeline-section">
-              <h4 className="section-title">{t("about.timeline.education.title")}</h4>
-              {t("about.timeline.education.items", { returnObjects: true }).map((edu, idx) => (
-                <div className="timeline-item" key={idx}>
-                  <div className="timeline-icon education-icon">🎓</div>
-                  <div className="timeline-content">
-                    <h5>{edu.title}</h5>
-                    <span className="timeline-date">{edu.date}</span>
-                    <p>{edu.description}</p>
+              <h4 className="section-title">
+                {t("about.timeline.education.title")}
+              </h4>
+              {t("about.timeline.education.items", { returnObjects: true }).map(
+                (edu, idx) => (
+                  <div className="timeline-item" key={idx}>
+                    <div className="timeline-icon education-icon">🎓</div>
+                    <div className="timeline-content">
+                      <h5>{edu.title}</h5>
+                      <span className="timeline-date">{edu.date}</span>
+                      <p>{edu.description}</p>
+                    </div>
                   </div>
-                </div>
-              ))}
+                )
+              )}
             </div>
           </div>
         </motion.div>

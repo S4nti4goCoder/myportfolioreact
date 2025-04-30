@@ -51,14 +51,29 @@
         "title": "Experiencia Laboral",
         "items": [
           {
-            "title": "Desarrollador Full Stack Freelance",
-            "date": "Enero 2024 - Abril 12 de 2025",
-            "description": "Desarrollo de aplicaciones web modernas utilizando React y Next.js."
+            "title": "Sistema de Ventas POS (Punto de Venta), Bogotá (Proyecto freelance)",
+            "date": "NOVIEMBRE 2020 — En curso (2025)",
+            "description": "Desarrollo de un sistema de ventas FullStack con diseño responsive, utilizando PHP 8, MySQL, HTML, CSS, jQuery y Bootstrap. Implementación de arquitectura MVC para gestionar multi-sucursales, roles de usuario, inventario, facturación electrónica (Colombia), reportes y control de caja diaria. Proyecto diseñado para desarrollo y comercialización."
           },
           {
-            "title": "Backend Developer - Proyecto Freelance",
-            "date": "2023",
-            "description": "Desarrollo de APIs RESTful y administración de bases de datos MySQL."
+            "title": "Sistema de comercio electrónico (Ecommerce), Bogotá (Proyecto freelance)",
+            "date": "NOVIEMBRE 2023 — DICIEMBRE 2024",
+            "description": "Desarrollo de plataforma eCommerce en PHP con arquitectura modular MVC para la gestión de productos, usuarios y pedidos. Integración de API REST para operaciones CRUD y panel administrativo basado en AdminLTE 3.2.0, con enfoque en escalabilidad y buenas prácticas de organización del código."
+          },
+          {
+            "title": "Sistema de Gestor de Documentos, Bogotá (Proyecto freelance)",
+            "date": "MAYO 2024 — AGOSTO 2024",
+            "description": "Desarrollo de sistema de gestión documental en PHP (CodeIgniter 4, MySQL) con arquitectura MVC escalable, permitiendo creación, edición, organización y búsqueda avanzada de archivos."
+          },
+          {
+            "title": "Sistema Marketplace (mercado online), Bogotá (Proyecto freelance)",
+            "date": "ABRIL 2025 — EN CURSO",
+            "description": "Desarrollo de marketplace en PHP 8 y MySQL con arquitectura RESTful, integración de pasarelas de pago, registro de usuarios, interfaz conversacional y sistema multivendedor."
+          },
+          {
+            "title": "Aprendiz SENA, Sistemas EnLinea S.A. Bogotá (Practicas)",
+            "date": " JUNIO 2022 — DICIEMBRE 2022",
+            "description": "Crear y desarrollar componentes y formularios en Angular, investigar e implementar microfrontends, estudiar e implementar la técnica de User Story Mapping, diseñar e implementar prototipos básicos sobre pantallas de soporte y en la creación de librerías Angular. "
           }
         ]
       },
@@ -66,19 +81,29 @@
         "title": "Educación",
         "items": [
           {
-            "title": "Actualmente",
-            "date": "07 de diciembre del 2023",
-            "description": "Sigo aprendiendo nuevas habilidades."
+            "title": "Análisis y Desarrollo de Sistemas de información",
+            "date": "NOVIEMBRE 2020 — DICIEMBRE 2022",
+            "description": "SENA: Servicio Nacional de Aprendizaje (Bogotá D.C)"
           },
           {
-            "title": "Diplomatura en Desarrollo Web con NEXTJS",
-            "date": "07 de agosto del 2023",
-            "description": "Aprendí Next.js, Tailwind, bases de datos y TypeScript."
+            "title": "Bachiller Académico, Instituto Tomas Moro, Bogotá",
+            "date": "ENERO 2011 — DICIEMBRE 2016"
           },
           {
-            "title": "Diplomatura en Desarrollo Web con JavaScript",
-            "date": "27 de febrero del 2023",
-            "description": "Aprendí HTML, CSS, JavaScript y bases de datos SQL."
+            "title": "Introducción al desarrollo de Front-end, Coursera.",
+            "date": "NOVIEMBRE 15, 2024"
+          },
+          {
+            "title": "Desarrollo Web Completo con HTML5, CSS3, JS AJAX PHP y MySQL, Udemy.",
+            "date": "ABRIL 2020 — DICIEMBRE 2022"
+          },
+          {
+            "title": "HTML y CSS a profundidad, Platzi.",
+            "date": "ENERO 2022 — ABRIL 2022"
+          },
+          {
+            "title": "Frontend con Angular, Platzi.",
+            "date": " JULIO 2022 — SEPTIEMBRE 2023"
           }
         ]
       }

@@ -1,7 +1,7 @@
 {
   "navbar": {
     "home": "Home",
-    "about": "About",
+    "about": "About Me",
     "skills": "Skills",
     "portfolio": "Portfolio",
     "contact": "Contact"
@@ -11,38 +11,38 @@
     "intro": "I'm Santiago Quintero",
     "location": "Bogotá, Colombia",
     "profession": "Fullstack Developer",
-    "description": "I am passionate about Frontend and Backend development with experience in Javascript, React.js, Angular.js, MySQL, PHP, and Laravel. I specialize in building modern, fast, and scalable digital solutions, focusing on user experience and code quality.",
+    "description": "I'm passionate about Frontend and Backend development with experience in Javascript, React.js, Angular.js, MySQL, PHP, and Laravel. I specialize in building modern, fast, and scalable digital solutions with a focus on user experience and code quality.",
     "cta": "Let's talk!",
     "cv_view": "View Resume",
     "cv_download": "Download CV",
-    "tech_label": "Technologies I use"
+    "tech_label": "Technologies I master"
   },
   "about": {
     "overlayText": "Developing innovative solutions",
     "title1": "About",
     "title2": "Me",
-    "description": "Frontend and Backend developer experienced in multiple technologies. Passionate about building efficient and scalable web applications. Self-taught, committed to continuous learning and best development practices.",
+    "description": "Frontend and Backend Developer with experience in multiple technologies. Passionate about building efficient and scalable web applications. A self-taught learner committed to continuous improvement and best development practices.",
     "experience": {
       "publicRepos": "Public Repositories",
       "featuredProjects": "Featured Projects",
-      "yearsExperience": "Years of Experience in projects"
+      "yearsExperience": "Years of Project Experience"
     },
     "focus": {
       "title1": "My Professional Focus",
       "list1": [
-        "Full-stack web application development (frontend and backend)",
+        "Full web application development (frontend and backend)",
         "Scalable and maintainable architectures",
-        "Focus on performance and user experience",
+        "Emphasis on performance and user experience",
         "Implementation of best coding practices",
         "Custom solutions for specific needs"
       ],
-      "title2": "Other Areas of Focus",
+      "title2": "Other Focus Areas",
       "list2": [
         "Integration of external APIs and third-party services",
         "Business process automation",
-        "Development of internal management systems",
-        "Database optimization and query tuning",
-        "Development of custom administration panels"
+        "Internal management systems development",
+        "Database and query optimization",
+        "Custom admin dashboard development"
       ]
     },
     "timeline": {
@@ -51,14 +51,29 @@
         "title": "Work Experience",
         "items": [
           {
-            "title": "Frontend Developer - Personal Project",
-            "date": "2024 - Present",
-            "description": "Developing modern web applications using React and Next.js."
+            "title": "POS Sales System, Bogotá (Freelance Project)",
+            "date": "NOVEMBER 2020 — Ongoing (2025)",
+            "description": "FullStack sales system with responsive design, built using PHP 8, MySQL, HTML, CSS, jQuery, and Bootstrap. MVC architecture implemented for multi-branch management, user roles, inventory, electronic invoicing (Colombia), reports, and daily cash control. Designed for development and commercialization."
           },
           {
-            "title": "Backend Developer - Freelance Project",
-            "date": "2023",
-            "description": "Building RESTful APIs and managing MySQL databases."
+            "title": "Ecommerce System, Bogotá (Freelance Project)",
+            "date": "NOVEMBER 2023 — DECEMBER 2024",
+            "description": "Ecommerce platform in PHP with modular MVC architecture for managing products, users, and orders. Integrated REST API for CRUD operations and an admin panel using AdminLTE 3.2.0. Focused on scalability and clean code organization."
+          },
+          {
+            "title": "Document Management System, Bogotá (Freelance Project)",
+            "date": "MAY 2024 — AUGUST 2024",
+            "description": "Document management system in PHP (CodeIgniter 4, MySQL) with scalable MVC architecture for creating, editing, organizing, and advanced file search."
+          },
+          {
+            "title": "Online Marketplace System, Bogotá (Freelance Project)",
+            "date": "MAY 2024 — AUGUST 2024",
+            "description": "Marketplace developed in PHP 8 and MySQL with RESTful architecture, payment gateway integration, user registration, chat interface, and multi-vendor support."
+          },
+          {
+            "title": "SENA Apprentice, Sistemas EnLinea S.A. Bogotá (Internship)",
+            "date": "JUNE 2022 — DECEMBER 2022",
+            "description": "Created and developed Angular components and forms, researched and implemented microfrontends, studied and applied User Story Mapping technique, designed and implemented basic prototypes for support screens and Angular libraries."
           }
         ]
       },
@@ -66,19 +81,29 @@
         "title": "Education",
         "items": [
           {
-            "title": "Currently",
-            "date": "December 7th, 2023",
-            "description": "Continuously learning new skills."
+            "title": "Systems Analysis and Development",
+            "date": "NOVEMBER 2020 — DECEMBER 2022",
+            "description": "SENA: National Learning Service (Bogotá D.C)"
           },
           {
-            "title": "Diploma in Web Development with NEXTJS",
-            "date": "August 7th, 2023",
-            "description": "Learned Next.js, Tailwind, databases, and TypeScript."
+            "title": "Academic High School Diploma, Instituto Tomas Moro, Bogotá",
+            "date": "JANUARY 2011 — DECEMBER 2016"
           },
           {
-            "title": "Diploma in Web Development with JavaScript",
-            "date": "February 27th, 2023",
-            "description": "Learned HTML, CSS, JavaScript, and SQL databases."
+            "title": "Introduction to Front-end Development, Coursera.",
+            "date": "NOVEMBER 15, 2024"
+          },
+          {
+            "title": "Complete Web Development with HTML5, CSS3, JS AJAX PHP and MySQL, Udemy.",
+            "date": "APRIL 2020 — DECEMBER 2022"
+          },
+          {
+            "title": "Deep Dive into HTML and CSS, Platzi.",
+            "date": "JANUARY 2022 — APRIL 2022"
+          },
+          {
+            "title": "Frontend with Angular, Platzi.",
+            "date": "JULY 2022 — SEPTEMBER 2023"
           }
         ]
       }
@@ -88,42 +113,42 @@
     "title": "My Skills",
     "frontend": {
       "title": "Frontend",
-      "description": "I specialize in Frontend development to create modern and functional websites using technologies like HTML, CSS, JavaScript, React, Angular, and Laravel. I always focus on providing optimized and scalable solutions."
+      "description": "I specialize in frontend development to create modern and functional websites using technologies like HTML, CSS, JavaScript, React, Angular, and Laravel. I always aim to deliver optimized and scalable solutions."
     },
     "backend": {
       "title": "Backend",
-      "description": "Backend applications development using Node.js, ensuring smooth integration with databases and APIs to offer optimal performance and an exceptional user experience."
+      "description": "Backend application development using Node.js, ensuring seamless integration with databases and APIs to deliver optimal performance and exceptional user experience."
     },
     "webapps": {
       "title": "Web Applications",
-      "description": "Building customized web applications with ReactJS, focusing on creating dynamic, fast, and responsive user experiences."
+      "description": "I build custom web applications with ReactJS, focusing on dynamic, fast, and responsive user experiences."
     }
   },
   "portfolio": {
     "sectionTitle": "Portfolio",
     "ecommerce": {
       "title": "Ecommerce",
-      "description": "E-commerce project in PHP with modular (MVC) architecture to manage products, users, and orders. Includes a REST API for CRUD and an admin panel with AdminLTE 3.2.0. Focused on scalability and code organization."
+      "description": "Ecommerce project in PHP with modular MVC architecture for managing products, users, and orders. Includes REST API for CRUD and an admin panel using AdminLTE 3.2.0. Focused on scalability and code organization."
     },
     "pos": {
-      "title": "Point of Sale System (POS)",
-      "description": "POS system in PHP (MVC) with multi-branch support, roles, inventory management, billing (Colombia), reports, and daily cash management. Practical system for development and commercialization."
+      "title": "Point of Sale (POS) System",
+      "description": "POS system in PHP (MVC) with multi-branch, roles, inventory management, invoicing (Colombia), reports, and daily cash control. Practical system for development and commercialization."
     },
     "marketplace": {
       "title": "Marketplace",
-      "description": "Marketplace built in PHP8/MySQL: RESTful API, payment gateways, user registration, conversational interface, and multivendor system."
+      "description": "Marketplace in PHP8/MySQL: RESTful API, payment gateways, user registration, chat interface, and multi-vendor system."
     },
     "filemanager": {
       "title": "File Manager",
-      "description": "Document management system developed with PHP/CodeIgniter 4/MySQL for creating, editing, organizing, and advanced searching of files, built with scalable MVC architecture."
+      "description": "Document system built in PHP/CodeIgniter 4/MySQL for creating, editing, organizing, and advanced file searching, with scalable MVC architecture."
     },
     "viewGithub": "View on GitHub"
   },
   "contact": {
     "title": "Contact",
     "info_title": "CONTACT INFORMATION",
-    "form_title": "Send your Message",
-    "name_placeholder": "Name",
+    "form_title": "Send Your Message",
+    "name_placeholder": "Full Name",
     "email_placeholder": "Email",
     "message_placeholder": "Message",
     "button": "Send Message"

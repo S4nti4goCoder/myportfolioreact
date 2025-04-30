@@ -82,7 +82,7 @@ const Hero = () => {
           {/* Botones de CV */}
           <div className="btn-split-wrapper">
             <a
-              href="/cv_santiago.pdf"
+              href="/cv_santiagoquintero.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className="btn-left"
@@ -93,7 +93,7 @@ const Hero = () => {
             </a>
 
             <a
-              href="/cv_santiago.pdf"
+              href="/cv_santiagoquintero.pdf"
               download
               className="btn-right tooltip-right"
               data-tooltip={t("hero.cv_download")}

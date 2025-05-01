@@ -144,6 +144,13 @@ html.dark .contact-form textarea {
   font-size: 1.8rem;
 }
 
+.error {
+  color: #e63946;
+  font-size: 0.9rem;
+  margin-top: -8px;
+  margin-bottom: 10px;
+}
+
 /* 📌 Responsive */
 @media (max-width: 768px) {
   .contact-container {

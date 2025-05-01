@@ -44,7 +44,15 @@ const Portfolio = () => {
   const portfolioItems = [
     {
       id: 1,
-      images: [ecommerce1, ecommerce2, ecommerce3, ecommerce4, ecommerce5, ecommerce6, ecommerce7],
+      images: [
+        ecommerce1,
+        ecommerce2,
+        ecommerce3,
+        ecommerce4,
+        ecommerce5,
+        ecommerce6,
+        ecommerce7,
+      ],
       title: t("portfolio.ecommerce.title"),
       description: t("portfolio.ecommerce.description"),
       demoLink: "https://github.com/S4nti4goCoder/ecommerce_php",
@@ -68,7 +76,16 @@ const Portfolio = () => {
     },
     {
       id: 4,
-      images: [gestor1, gestor2, gestor3, gestor4, gestor5, gestor6, gestor7, gestor8],
+      images: [
+        gestor1,
+        gestor2,
+        gestor3,
+        gestor4,
+        gestor5,
+        gestor6,
+        gestor7,
+        gestor8,
+      ],
       title: t("portfolio.filemanager.title"),
       description: t("portfolio.filemanager.description"),
       demoLink: "https://github.com/S4nti4goCoder/gestor-archivos",
